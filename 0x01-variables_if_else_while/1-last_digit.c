@@ -25,7 +25,7 @@ int main(void)
 		else
 			printf("Last digit of %i is %i %s\n", n, la, menos);
 	else
-		if (la == 0)
+		if (la = 0)
 			printf("Last digit of %i is %i %s\n", n, la, cero);
 		else
 			printf("Last digit of %i is %i %s\n", n, la, menos);
