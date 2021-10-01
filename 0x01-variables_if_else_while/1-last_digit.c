@@ -19,16 +19,11 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	la = n % 10;
 
-	if (n > 0)
-		if (la >= 6)
-			printf("Last digit of %i is %i %s\n", n, la, great);
-		else
-			printf("Last digit of %i is %i %s\n", n, la, menos);
+	if (la == 0)
+		printf("Last digit of %i is %i %s\n", n, la, cero);
+	if (la >= 6)
+		printf("Last digit of %i is %i %s\n", n, la, great);
 	else
-		if (la < 0)
-			printf("Last digit of %i is %i %s\n", n, la, menos);
-		else
-			printf("Last digit of %i is %i %s\n", n, la, cero);
+		printf("Last digit of %i is %i %s\n", n, la, menos);
 	return (0);
-
 }
