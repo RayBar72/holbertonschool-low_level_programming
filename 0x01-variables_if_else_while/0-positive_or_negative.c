@@ -20,6 +20,6 @@ int main(void)
 		else
 			printf("%i is positive\n", n);
 	else
-		printf("i% is negative\n", n);
+		printf("%i is negative\n", n);
 	return (0);
 }
