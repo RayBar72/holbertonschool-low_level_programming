@@ -19,7 +19,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	la = n % 10;
 
-	if (la == 0)
+	if (la = 0)
 		printf("Last digit of %i is %i %s\n", n, la, cero);
 	if (la >= 6)
 		printf("Last digit of %i is %i %s\n", n, la, great);
