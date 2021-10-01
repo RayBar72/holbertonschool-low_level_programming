@@ -24,6 +24,6 @@ int main(void)
 	else if (la >= 6)
 		printf("Last digit of %i is %i %s\n", n, la, great);
 		else
-		printf("Last digit of %i is %i %s\n", n, la, cero);
+		printf("Last digit of %i is %i %s\n", n, la, menos);
 	return (0);
 }
