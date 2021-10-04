@@ -31,8 +31,8 @@ int main(void)
 				putchar (' ');
 				putchar (y);
 				putchar (z);
-				if (r != 9 || x != 8 || y != 9
-				|| z != 9)
+				if (r != '9' || x != '8' || y != '9' ||
+				    z != '9')
 				{
 				putchar (',');
 				putchar (' ');
