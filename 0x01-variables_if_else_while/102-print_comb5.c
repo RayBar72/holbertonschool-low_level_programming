@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
  * main - Entry point
@@ -22,22 +20,22 @@ int main(void)
 			for (y = '0'; y <= '9'; y++)
 				for (z = '0'; z <= '9'; z++)
 				{
-				a = x + (10 * r);
-				b = z + (10 * y);
-				if (a < b)
-				{
-				putchar (r);
-				putchar (x);
-				putchar (' ');
-				putchar (y);
-				putchar (z);
-				if (r != '9' || x != '8' || y != '9' ||
-				    z != '9')
-				{
-				putchar (',');
-				putchar (' ');
-				}
-				}
+					a = x + (10 * r);
+					b = z + (10 * y);
+					if (a < b)
+					{
+						putchar (r);
+						putchar (x);
+						putchar (' ');
+						putchar (y);
+						putchar (z);
+						if (r != '9' || x != '8' || y != '9' ||
+						    z != '9')
+						{
+							putchar (',');
+							putchar (' ');
+						}
+					}
 				}
 				putchar ('\n');
 	return (0);
