@@ -14,8 +14,8 @@ int main(void)
 	int x;
 	int y;
 	int z;
-	int a = r + (10 * x);
-	int b = y + (10 * z);
+	int a;
+	int b;
 
 	for (r = '0'; r <= '9'; r++)
 		for (x = '0'; x <= '9'; x++)
