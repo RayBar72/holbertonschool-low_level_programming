@@ -9,7 +9,7 @@
  */
 int _islower(int x)
 {
-	char x;
+	int x;
 
 	if (x >= 'a' && x <= 'z')
 		_putchar('1');
