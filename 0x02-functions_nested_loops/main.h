@@ -52,20 +52,3 @@ void print_alphabet_x10(void)
 	_putchar('\n');
 	}
 }
-
-/**
- * print_alphabet_x10 - writes the alphabet ten times
- *
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _islower(int c)
-{
-	char x;
-
-	if (x >= 'a' && x <= 'z')
-		return ('1');
-	else
-		return ('0');
-}
