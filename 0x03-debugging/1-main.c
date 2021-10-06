@@ -13,12 +13,12 @@ int main(void)
 
 	i = 0; /* i is setted less than 0
 
-	while (i < 10) /* There is not ++i */
+	while (i < 10)
 	{
-		putchar(i); /* There is not ++i */
-	}
+		putchar(i);
+	*/ ++ i does not increase */}
 
-	printf("Infinite loop avoided! \\o/\n"); /* Becasuse i printed inf */
+	printf("Infinite loop avoided! \\o/\n"); /* Output inf */
 
 	return (0);
 }
