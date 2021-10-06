@@ -11,9 +11,6 @@
 
 void print_to_98(int x)
 {
-
-	int x;
-
 	for (x; x <= 97; x++)
 		printf("%i, ", x);
 	putchar('9');
