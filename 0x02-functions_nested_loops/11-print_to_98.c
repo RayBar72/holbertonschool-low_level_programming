@@ -11,9 +11,20 @@
 
 void print_to_98(int x)
 {
+	if (x <= 98)
+	{
 	for (; x <= 97; x++)
 		printf("%i, ", x);
 	putchar('9');
 	putchar('8');
 	putchar('\n');
+	}
+	if (x > 98)
+	{
+	for (; x >= 99; x--)
+		printf("%i, ", x);
+	putchar('9');
+	putchar('8');
+	putchar('\n');
+	}
 }
