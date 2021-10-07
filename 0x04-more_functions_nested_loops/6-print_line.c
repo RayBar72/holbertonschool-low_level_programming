@@ -17,4 +17,5 @@ void print_line(int n)
 		for (z = 1; z <= n; z++)
 			_putchar('_');
 	_putchar('\n');
+
 }
