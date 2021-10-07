@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal - writes the character c to stdout
+ * print_square - writes the character c to stdout
  *@size: logitud of one side of the square.
  *
  * Return: On success 1.
