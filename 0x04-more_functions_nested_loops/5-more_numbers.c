@@ -22,8 +22,8 @@ void more_numbers(void)
 			b = x % 10;
 			if (x >= 10)
 				_putchar(a + '0');
-			_putchar(b+ '0');
-			if (y == 10)
-				_putchar(b + '0');
+			_putchar(b + '0');
+			if (x == 14)
+				_putchar('\n');
 		}
 }
