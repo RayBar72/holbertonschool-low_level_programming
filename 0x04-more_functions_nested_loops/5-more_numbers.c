@@ -25,4 +25,5 @@ void more_numbers(void)
 			_putchar(b+ '0');
 			if (y == 10)
 				_putchar(b + '0');
+		}
 }
