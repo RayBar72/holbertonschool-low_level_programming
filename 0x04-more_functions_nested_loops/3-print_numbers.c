@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_numbers - writes the character c to stdout
+ * print_numbers - writes the characters
  *
  *
  * Return: On success 1.
@@ -14,5 +14,5 @@ void print_numbers(void)
 
 	for (x = '0'; x <= '9'; x++)
 		_putchar(x);
-		_putchar('\n');
+	_putchar('\n');
 }
