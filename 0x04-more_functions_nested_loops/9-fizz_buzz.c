@@ -14,9 +14,9 @@ int main(void)
 	{
 		if (y % 3 == 0 && y % 5 == 0)
 			printf("FizzBuzz ");
-		if (y % 3 == 0)
+		if (y % 3 == 0 && y % 5 != 0)
 			printf("Fizz ");
-		if (y % 5 == 0)
+		if (y % 5 == 0 && y % 3 != 0)
 			printf("Buzz ");
 		if (y % 3 != 0 && y % 5 != 0)
 			printf("%d ", y);
