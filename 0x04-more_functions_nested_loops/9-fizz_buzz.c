@@ -1,13 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - FizBuz
+ * main - Entry point
  *
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ *Return: Alway 0 (Success)
  */
-
 int main(void)
 {
 
@@ -24,6 +21,6 @@ int main(void)
 		if (y % 3 != 0 && y % 5 != 0)
 			printf("%d ", y);
 	}
-	printf("Buzz'\n'");
+	printf("Buzz\n");
 	return (0);
 }
