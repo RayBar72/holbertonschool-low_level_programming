@@ -14,10 +14,10 @@ void puts2(char *str)
 	count--;
 	i = 0;
 	do {
-		_putchar(*(str + i));
+		_putchar(str[i]);
 		i = i + 2;
 	}
 			while (i <= count);
-	_putchar('\n');
+	_putchar(10);
 
 }
