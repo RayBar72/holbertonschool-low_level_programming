@@ -18,8 +18,8 @@ int _atoi(char *s)
 	while (i < len)
 	{
 		j = emp + len - 1;
-		numero = (exp * ((s[j - i])-48)) + numero;
-		if (numero < 214748364.7)
+		numero = (exp * ((s[j - i]) - 48)) + numero;
+		if (numero < 214748364)
 			exp = exp * 10;
 		i++;
 	}
@@ -32,7 +32,7 @@ int _atoi(char *s)
 	}
 	if (signo % 2 != 0)
 		numero = numero * (-1);
-	if (len == 0)
+	if (emp == 0 && len == 0)
 		numero = 0;
 	return (numero);
 }
