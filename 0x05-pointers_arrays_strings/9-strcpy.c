@@ -4,7 +4,8 @@
  * _strcpy - Copies the string pointed
  * @dest: array of end.
  * @src: array of origin.
- * return - the string
+ *
+ * Return: strign to dest
  */
 
 char *_strcpy(char *dest, char *src)
