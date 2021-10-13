@@ -8,11 +8,16 @@
 
 int _atoi(char *s)
 {
-	int i, j, emp = 0, signo = 0, exp = 1, num = 0, len = 0, c1 = 0;
+	int i, j, emp = 0, signo = 0, exp = 1, num = 0, len = 0, c1 = 0, c2 = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 		c1++;
 	c1--;
+	i = 0;
+	for (i = 0; i <= c1; i++)
+		if (s[i] > 57 || s[i] < 48)
+			c2++;
+	c2--
 	i = 0;
 	for (i = 0; s[i] < 48 || s[i] > 57; i++)
 		emp++;
@@ -36,7 +41,7 @@ int _atoi(char *s)
 			exp = exp * 10;
 		i++;
 	}
-	if (c1 < 0 || (c1 > 0 && (emp - 1) == c1))
+	if (c1 < 0 || (c1 == c2))
 		num = 0;
 	return (num);
 }
