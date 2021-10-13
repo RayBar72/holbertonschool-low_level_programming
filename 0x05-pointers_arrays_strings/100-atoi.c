@@ -15,8 +15,9 @@ int _atoi(char *s)
 	c1--;
 	i = 0;
 	for (i = 0; i <= c1; i++)
-		if (!(s[i] < 48 || s[i]))
-			c2++;
+		if (s[i] < 48 && s[i] > 57)
+			c2 = 1;
+	i = 0;
 	for (i = 0; s[i] < 48 || s[i] > 57; i++)
 		emp++;
 	for (j = emp; !(s[j] < 48 || s[j] > 57); j++)
@@ -35,11 +36,11 @@ int _atoi(char *s)
 	{
 		j = emp + len - 1;
 		num = (exp * ((s[j - i]) - 48)) + num;
-		if (num < 2147483647 || num > -2147483648)
+		if (num < 2147483647 && num > -2147483648)
 			exp = exp * 10;
 		i++;
 	}
-	if (c2 == c1)
+	if (c1 < 0 || c2 == 1)
 		num = 0;
 	return (num);
 }
