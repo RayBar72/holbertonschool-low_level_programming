@@ -36,7 +36,7 @@ int _atoi(char *s)
 			exp = exp * 10;
 		i++;
 	}
-	if (c1 < 0 || (c1 > 0 && emp == c1))
+	if (c1 < 0 || (c1 > 0 && (emp - 1) == c1))
 		num = 0;
 	return (num);
 }
