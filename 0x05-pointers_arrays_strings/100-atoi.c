@@ -17,7 +17,7 @@ int _atoi(char *s)
 	for (i = 0; i <= c1; i++)
 		if (s[i] > 57 || s[i] < 48)
 			c2++;
-	c2--
+	c2--;
 	i = 0;
 	for (i = 0; s[i] < 48 || s[i] > 57; i++)
 		emp++;
