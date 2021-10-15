@@ -20,9 +20,5 @@ char *cap_string(char *s)
 				{
 				s[i + 1] = s[i + 1] - 32;
 				}
-	for (i = 0; s[i] != '\0'; i++)
-		putchar(s[i]);
-	printf("\n");
-
 	return (s);
 }
