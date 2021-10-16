@@ -1,24 +1,32 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_number - fuction that translates character to int
  * @n: number to be print
  * Return: value of the int
  */
-
 void print_number(int n)
 {
-	int num, len = 0, exp = 1, i = 1, imp, abs;
+	int num, len = 0, exp = 1, i = 1, imp;
 
+	num = n;
 	if (n < 0)
-		num = n * (-1);
-	else
-		num = n;
-
-	while (num >= 10)
 	{
-		num = num / 10;
-		len++;
+		_putchar(45);
+		while (num <= -10)
+		{
+			num = num / 10;
+			len++;
+		}
+	}
+	else
+		{
+		while (num >= 10)
+		{
+			num = num / 10;
+			len++;
+		}
 	}
 	len++;
 
@@ -30,18 +38,13 @@ void print_number(int n)
 	}
 
 	i = 0;
-	if (n < 0)
-	{
-		abs = n * -1;
-		_putchar(45);
-	}
-	else
-		abs = n;
 	while (i < len)
 	{
-		imp = abs / exp;
+		imp = n / exp;
+		if (imp < 0)
+			imp = imp * -1;
 		_putchar(imp + '0');
-		abs = abs % exp;
+		n = n % exp;
 		exp = exp / 10;
 		i++;
 	}
