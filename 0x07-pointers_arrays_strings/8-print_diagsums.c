@@ -3,9 +3,10 @@
 
 /**
  * print_diagsums - number of bytes in the initial segment of s
+ *
  * @a: the string
  * @size: the size of sting
- * 
+ *
  */
 
 void print_diagsums(int *a, int size)
@@ -14,8 +15,8 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		d1 += a[i * (size +1)];
+		d1 += a[i * (size + 1)];
 		d2 += a[size - 1 + i * (size - 1)];
 	}
-	printf ("%d, %d\n", d1, d2);
+	printf("%d, %d\n", d1, d2);
 }
