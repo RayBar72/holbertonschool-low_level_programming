@@ -4,8 +4,8 @@
 /**
  * print_diagsums - number of bytes in the initial segment of s
  * @a: the string
- *
- * Return: Nothing.
+ * @size: the size of sting
+ * 
  */
 
 void print_diagsums(int *a, int size)
