@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strspn - Returns the number of bytes in the initial segment of s which consi
+ * _strspn - Returns the number of bytes in the initial segment of s
  * @s: string to be evaluated
  * @accept: character to be searched
  *
@@ -20,6 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 		for (j = 0; accept[j] != '\0'; j++)
 			if (s[i] == accept[j])
 				n++;
+		if (
 		if (n - 1 != i)
 			break;
 	}
