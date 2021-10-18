@@ -27,5 +27,7 @@ char *_strpbrk(char *s, char *accept)
 		if (n > 0)
 			break;
 	}
+	if (n == 0)
+		s = '\0';
 	return (s);
 }
