@@ -5,7 +5,6 @@
  * @s: string to be evaluated
  * @accept: character to be searched
  *
- *
  * Return: pointer to dest.
  */
 
