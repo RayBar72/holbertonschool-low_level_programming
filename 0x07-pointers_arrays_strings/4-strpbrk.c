@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strpbrk -  function locates the first occurrence in the string 
+ * _strpbrk -  function locates the first occurrence in the string
  * @s: string to be evaluated
  * @accept: character to be searched
  *
@@ -24,7 +24,7 @@ char *_strpbrk(char *s, char *accept)
 				s = s + i;
 				break;
 			}
-		if (n >0)
+		if (n > 0)
 			break;
 	}
 	return (s);

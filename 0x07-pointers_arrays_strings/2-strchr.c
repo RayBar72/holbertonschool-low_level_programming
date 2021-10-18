@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _strchr -  pointer to the first occurrence of the character c in the string s
+ * _strchr - pointer to the first occurrence of the character c in the string s
  * @s: string to be evaluated
  * @c: character to be searched
- * @n: Number of bytes to be changed
+ *
  *
  * Return: pointer to dest.
  */
