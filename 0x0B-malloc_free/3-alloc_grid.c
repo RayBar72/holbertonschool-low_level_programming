@@ -13,7 +13,7 @@
 
 int *vertical(int vert)
 {
-	int *x = malloc(vert * sizeof(int));;
+	int *x = malloc(vert * sizeof(int));
 	int i;
 
 	if (x)
