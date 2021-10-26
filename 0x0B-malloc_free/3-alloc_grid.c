@@ -13,13 +13,12 @@
 
 int *vertical(int vert)
 {
-	int *x;
+	int *x = malloc(vert * sizeof(int));;
 	int i;
 
-	x = malloc(vert * sizeof(int));
-
-	for (i = 0; i < vert; i++)
-		x[i] = 0;
+	if (x)
+		for (i = 0; i < vert; i++)
+			x[i] = 0;
 
 	return (x);
 }
