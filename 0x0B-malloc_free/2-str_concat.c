@@ -22,14 +22,14 @@ char *str_concat(char *s1, char *s2)
 		;
 
 	k = j + i;
-	s = (char *)malloc(k);
+	s = (char *)malloc(k + 1);
 
 	if (s == NULL)
 		return (NULL);
 	if (i == 0)
-		s1[i] = '\0';
+		return (0);
 	if (j == 0)
-		s2[j] = '\0';
+		return (0);
 
 	for (count = 0; count < i; count++)
 		s[count] = s1[count];
