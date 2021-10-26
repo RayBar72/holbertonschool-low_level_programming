@@ -13,8 +13,8 @@
 
 int *vertical(int vert)
 {
-	int i = 0;
 	int *x;
+	int i;
 
 	x = malloc(vert * sizeof(int));
 
@@ -34,12 +34,12 @@ int *vertical(int vert)
 
 int **alloc_grid(int width, int height)
 {
-	int i = 0;
 	int **x;
+	int i;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	x = (int **)malloc(height * sizeof(int *));
+	x = malloc(height * sizeof(int *));
 	if (x == NULL)
 		return (NULL);
 	for (i = 0; i < height; i++)
