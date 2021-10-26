@@ -45,11 +45,10 @@ int **alloc_grid(int width, int height)
 	for (i = 0; i < height; i++)
 	{
 		x[i] = vertical(width);
-		if (x == NULL)
+		if (x[i] == NULL)
 		{
-			for (j = 0; j < width; j++)
-				if (x[j])
-					free(x[j]);
+			while (i > 0)
+				free(x[--1]);
 			free(x);
 			return (NULL);
 		}
