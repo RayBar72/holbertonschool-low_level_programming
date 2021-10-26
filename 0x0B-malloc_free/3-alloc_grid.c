@@ -34,7 +34,7 @@ int *vertical(int vert)
 
 int **alloc_grid(int width, int height)
 {
-	int i = 0;
+	int i = 0, j = 0;
 	int **x;
 
 	if (width <= 0 || height <= 0)
@@ -47,8 +47,8 @@ int **alloc_grid(int width, int height)
 		x[i] = vertical(width);
 		if (x == NULL)
 		{
-			while (i > 0)
-				free(x[--i]);
+			for (i = 0; i < height; i++)
+				free(x[i]);
 			free(x);
 			return (NULL);
 		}
