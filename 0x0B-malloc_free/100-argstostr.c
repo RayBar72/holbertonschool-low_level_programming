@@ -56,7 +56,7 @@ char *argstostr(int ac, char **av)
 		lon = lon + larg(av[i]) + 1;
 	}
 
-	fin = malloc(lon);
+	fin = malloc(lon + 1);
 	if (!fin)
 		return (NULL);
 
