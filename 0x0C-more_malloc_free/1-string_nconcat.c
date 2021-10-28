@@ -58,11 +58,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int ls = 0, ls1 = 0, ls2 = 0;
 	char *s;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
 	ls1 = larg(s1);
 	ls2 = larg(s2);
 	ls = ls1 + ls2 + 1;
