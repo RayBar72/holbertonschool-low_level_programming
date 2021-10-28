@@ -14,10 +14,11 @@ int larg(char *s)
 {
 	int i = 0;
 
-	if (s)
-		for ( ; s[i] != '\0'; i++)
+	if (!s)
+		return (NULL);
+
+	for ( ; s[i]; i++)
 			;
-	i = i;
 	return (i);
 }
 
@@ -32,11 +33,6 @@ int larg(char *s)
 char *scopy(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0;
-
-	if (!s2)
-		return (s1);
-	if (!s1)
-		return (s2);
 
 	while (i < n)
 	{
