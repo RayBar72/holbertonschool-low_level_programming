@@ -40,4 +40,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		*fin++ = *ptr1++;
 
 	return (finre);
+	free(ptr);
 }
