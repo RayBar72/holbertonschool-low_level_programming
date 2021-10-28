@@ -72,5 +72,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	scopy(s + ls1, s2, ls2);
 	s[ls1 + ls2] = '\0';
 	return (s);
+	free(s);
 
 }
