@@ -60,7 +60,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	ls1 = larg(s1);
 	ls2 = larg(s2);
-	ls = ls1 + ls2 + 2;
+	ls = ls1 + ls2;
 	if (n < ls2)
 		ls2 = n;
 
