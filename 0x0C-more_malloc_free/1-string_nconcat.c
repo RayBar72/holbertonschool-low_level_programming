@@ -33,6 +33,10 @@ char *scopy(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0;
 
+	if (!s2)
+		return (s1);
+	if (!s1)
+		return (s2);
 
 	while (i < n)
 	{
@@ -58,6 +62,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int ls = 0, ls1 = 0, ls2 = 0;
 	char *s;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	ls1 = larg(s1);
 	ls2 = larg(s2);
 	ls = ls1 + ls2 + 1;
@@ -72,6 +81,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	scopy(s + ls1, s2, ls2);
 	s[ls1 + ls2] = '\0';
 	return (s);
-	free(s);
 
 }
