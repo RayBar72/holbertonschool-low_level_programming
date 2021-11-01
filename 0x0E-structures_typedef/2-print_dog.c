@@ -27,7 +27,7 @@ void print_dog(struct dog *d)
 
 	char s2[] = "(nil)";
 
-	if (d = NULL)
+	if (*d = NULL)
 		printf("%s\n", s2);
 	p_null_notnull("Name: %s\n", d->name);
 	printf("Age: %f\n", d->age);
