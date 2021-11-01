@@ -25,8 +25,10 @@ void p_null_notnull(char *f, char *v)
 void print_dog(struct dog *d)
 {
 
+	s2 = "(nil)";
+
 	if (!d)
-		return;
+		printf("%s\n", s2);
 	p_null_notnull("Name: %s\n", d->name);
 	printf("Age: %f\n", d->age);
 	p_null_notnull("Owner: %s\n", d->owner);
