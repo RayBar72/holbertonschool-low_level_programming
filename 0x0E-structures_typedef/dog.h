@@ -4,6 +4,12 @@
 #include <stdio.h>
 
 int _putchar(char c);
+/**
+ * struct dog - dog characteristics
+ * @name: name
+ * @age: age
+ * @owner: owner
+ */
 struct dog
 {
 	char *name;
