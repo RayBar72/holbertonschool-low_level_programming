@@ -25,7 +25,7 @@ void p_null_notnull(char *f, char *v)
 void print_dog(struct dog *d)
 {
 
-	s2 = "(nil)";
+	char s2 = "(nil)";
 
 	if (!d)
 		printf("%s\n", s2);
