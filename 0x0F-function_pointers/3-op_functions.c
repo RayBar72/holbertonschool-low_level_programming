@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * ops_add - function that returns sum
+ * op_add - function that returns sum
  * @a: int
  * @b: int
  * Return: sum
@@ -19,7 +19,7 @@ int op_add(int a, int b)
 }
 
 /**
- * ops_sub - function that returns difference
+ * op_sub - function that returns difference
  * @a: int
  * @b: int
  * Return: difference
@@ -34,7 +34,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * ops_mul - function that returns mult
+ * op_mul - function that returns mult
  * @a: int
  * @b: int
  * Return: mult
@@ -50,7 +50,7 @@ int op_mul(int a, int b)
 
 
 /**
- * ops_div - function that returns div
+ * op_div - function that returns div
  * @a: int
  * @b: int
  * Return: div
@@ -66,7 +66,7 @@ int op_div(int a, int b)
 
 
 /**
- * ops_mod - function that returns mod
+ * op_mod - function that returns mod
  * @a: int
  * @b: int
  * Return: mod

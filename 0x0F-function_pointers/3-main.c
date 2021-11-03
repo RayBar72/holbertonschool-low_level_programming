@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	if (argc != 4)
 	{
 		puts("Error");
-		exit (98);
+		exit(98);
 	}
 
 	fun = get_op_func(argv[2]);
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	if (!fun)
 	{
 		puts("Error");
-		exit (99);
+		exit(99);
 	}
 
 	a = atoi(argv[1]);
@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 	if (argv[2][0] == '/' && b == 0)
 	{
 		puts("Error");
-		exit (100);
+		exit(100);
 	}
 
 	fun = get_op_func(argv[2]);
