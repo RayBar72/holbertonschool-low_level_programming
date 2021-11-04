@@ -24,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (i && separator)
 			printf("%s", separator);
 		s1 = va_arg(imp, char*);
-		if(s1)
+		if (s1)
 			printf("%s", s1);
 		else
 			printf("(nil)");
