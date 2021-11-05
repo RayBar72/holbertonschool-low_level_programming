@@ -58,6 +58,7 @@ void print_all(const char * const format, ...)
 					s = "(nil)";
 				printf("%s", s);
 				c = 1;
+				break;
 		}
 		i++;
 	}
