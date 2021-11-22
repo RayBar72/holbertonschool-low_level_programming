@@ -10,32 +10,31 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *s;
-	int op;
-	ssize_t count, w;
+	int op, r, w;
 
+	if (filename == NULL)
+		return (0);
 	s = malloc(letters);
-	if (!s)
-		return (0);
-
-	if (!filename)
-		return (0);
 	op = open(filename, O_RDONLY);
-	if (op < 0)
-		return (0);
-	count = read(op, s, letters);
-	close(op);
-	if (count < 0)
+	if (op == -1)
 	{
-		count = 0;
 		free(s);
 		return (0);
 	}
-	w = write(1, s, count);
-	if  (w < 0)
+	r = read(op, s, letters);
+	if (r == -1)
 	{
-		return (0);
 		free(s);
+		return (0);
 	}
-	return (w);
+	w = write(1, s, r);
+	if (w == -1)
+	{
+		free(s);
+		close(op);
+		return (0);
+	}
 	free(s);
+	close(op);
+	return (w);
 }
