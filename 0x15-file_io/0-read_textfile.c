@@ -31,10 +31,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	w = write(1, s, count);
-	if (w != count || w < 0)
+	if  (w < 0)
 	{
 		return (0);
 		free(s);
 	}
-	return (count);
+	return (w);
+	free(s);
 }
