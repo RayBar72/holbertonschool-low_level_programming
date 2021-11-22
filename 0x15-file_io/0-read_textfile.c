@@ -25,6 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		count = 0;
 		free(s);
+		return (count);
 	}
 	count = read(op, s, letters);
 	close(op);
@@ -32,11 +33,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		count = 0;
 		free(s);
+		return (count);
 	}
 	if (write(1, s, count) != count)
 	{
 		return (0);
 		free(s);
+		return (count);
 	}
 	return (count);
 }
