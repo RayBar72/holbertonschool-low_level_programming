@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int op;
 	ssize_t count;
 
-	if(!filename)
+	if (!filename)
 		return (0);
 	op = open(filename, O_RDONLY);
 	if (op < 0)
@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (write(1, s, count) != count)
 	{
 		return (0);
-		free (s);
+		free(s);
 	}
 	return (count);
 }
