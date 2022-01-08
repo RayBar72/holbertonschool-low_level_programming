@@ -1,24 +1,28 @@
 #include "lists.h"
 
 /**
- * dlistint_len -  function that returns the number of elements
+ * insert_node -  function that returns new nod
  * @h: pointer to the list
+ * @n: value of node
  * Return: number of element
  */
 
-size_t dlistint_len(const dlistint_t *h)
+dlistint_t *insert_node(dlistint_t *h, int n)
 {
-	unsigned int i = 0;
+	dlistint_t *new;
 
 	if (!h)
-		return (0);
-	while (h)
-	{
-		i++;
-		h = h->next;
-	}
-	return (i);
-
+		return (NULL);
+	new = malloc(sizeof(dlistint_t));
+	if (!new)
+		return (NULL);
+	new->n = n;
+	new->next = h->next;
+	new->prev = h;
+	if (h->next)
+		h->next->prev = new;
+	h->next = new;
+	return (new);
 }
 
 /**
@@ -31,27 +35,17 @@ size_t dlistint_len(const dlistint_t *h)
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new = NULL, *recorre = *h;
-	unsigned int largo = dlistint_len(recorre);
+	dlistint_t *recorre;
 
-	if (!h || idx > largo)
+	if (!h)
 		return (NULL);
-	if (largo == 0)
+	if (idx == 0)
 		return (add_dnodeint(h, n));
-	if (largo == idx)
-		return (add_dnodeint_end(h, n));
-	new = malloc(sizeof(dlistint_t));
-	if (!new)
-		return (NULL);
 	recorre = *h;
-	new->n = n;
 	while (--idx)
-	{
-		recorre = recorre->next;
-	}
-	new->next = recorre->next;
-	new->prev = recorre;
-	recorre->next->prev = new;
-	recorre->next = new;
-	return (new);
+		if (recorre)
+			recorre = recorre->next;
+		else
+			return (NULL);
+	return (insert_node(recorre, n));
 }
