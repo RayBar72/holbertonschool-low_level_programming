@@ -36,16 +36,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (!h || idx >= largo)
 		return (NULL);
-	if (!*h)
-	{
-		new = add_dnodeint(h, n);
-		return (new);
-	}
-	if (largo == idx - 1)
-	{
-		new = add_dnodeint_end(h, n);
-		return (new);
-	}
+	if (largo == 0)
+		return (add_dnodeint(h, n));
+	if (largo == idx)
+		return (add_dnodeint_end(h, n));
 	new = malloc(sizeof(dlistint_t));
 	if (!new)
 		return (NULL);
