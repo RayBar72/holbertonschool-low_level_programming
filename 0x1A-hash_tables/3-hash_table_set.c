@@ -65,7 +65,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/*Buscando si nodo ocupado*/
 	search = search_head(ht->array[index], (char *)key);
 	if (search)
+	{
+		free(search->value);
 		search->value = var;
+	}
 	else
 	{
 		key_resp = strdup(key);
