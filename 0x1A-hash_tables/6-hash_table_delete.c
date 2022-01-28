@@ -12,7 +12,7 @@ hash_node_t *head = NULL, *next = NULL;
 
 	if (!ht)
 		return;
-	for( ; i < ht->size; i++)
+	for ( ; i < ht->size; i++)
 	{
 		head = ht->array[i];
 		while ((next = head) != NULL)
@@ -22,7 +22,6 @@ hash_node_t *head = NULL, *next = NULL;
 			free(next->key);
 			free(next);
 		}
-		
 	}
 	free(ht->array);
 	free(ht);
