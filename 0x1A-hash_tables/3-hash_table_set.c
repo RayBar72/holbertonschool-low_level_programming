@@ -4,7 +4,7 @@
  * search_head - looks at hash ind. post for the existence
  * @head: pointer to positiones
  * @key: of the node
- * @Return - pointer or string
+ * Return: pointer or string
  */
 static hash_node_t *search_head(hash_node_t *head, char *key)
 {
