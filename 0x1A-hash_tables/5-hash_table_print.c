@@ -19,7 +19,7 @@ void hash_table_print(const hash_table_t *ht)
 		while (aimprimir)
 		{
 			if (passed)
-				printf(",");
+				printf(", ");
 			printf("'%s': '%s'", aimprimir->key, aimprimir->value);
 			passed = 1;
 			aimprimir = aimprimir->next;
