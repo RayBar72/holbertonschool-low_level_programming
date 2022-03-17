@@ -17,11 +17,7 @@ def island_perimeter(grid):
     for row in grid:
         if sum(row) > 1:
             ancho = sum(row)
-        elif sum(row) == 1:
+        if sum(row) > 0:
             largo += 1
-    if largo > 0 and ancho > 0:
-        largo += 1
-    elif ancho == 0 and largo == 1:
-        return 1
     perimetro = 2 * (ancho + largo)
     return perimetro
