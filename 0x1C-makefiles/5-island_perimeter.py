@@ -8,19 +8,22 @@
 def island_perimeter(grid):
     """
         Returns the perimeter
+        Secund version. New idea
+        If all points have borders
     """
-    largo = 0
-    ancho = 0
     perimetro = 0
     if not isinstance(grid, list):
         return 0
-    for row in grid:
-        if sum(row) > 1:
-            ancho = sum(row)
-        if sum(row) > 0:
-            largo += 1
-    if ancho == 1 and largo == 1:
-        perimetro = 1
-    else:
-        perimetro = 2 * (ancho + largo)
+    for row in range(len(grid)):
+        for col in range(len(grid[row])):
+            if grid[row][col] == 1:
+                perimetro += 4
+                if row > 0 and grid[row - 1][col] == 1:
+                    perimetro -= 1
+                if col > 0 and grid[row][col - 1] == 1:
+                    perimetro -= 1
+                if row < (len(grid) - 1) and grid[row + 1][col] == 1:
+                    perimetro -= 1
+                if col < (len(grid) - 1) and grid[row][col + 1] == 1:
+                    perimetro -=1
     return perimetro
