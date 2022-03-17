@@ -11,7 +11,8 @@ def island_perimeter(grid):
     """
     largo = 0
     ancho = 0
-    i = 0
+    if not isinstance(grid, list):
+        return 0
     for row in grid:
         if sum(row) > 1:
             ancho = sum(row)
