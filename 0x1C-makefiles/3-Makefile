@@ -5,14 +5,14 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(patsubst %.c,%.o,$(SRC))
 NAME = school
-RM = rm
+RM = rm f
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 .PHONY: clean oclean fclean re
 clean:
-	$(RM) -f *~$(NAME)
+	$(RM) *~$(NAME)
 oclean:
-	$(RM) -f $(OBJ)
+	$(RM) $(OBJ)
 fclean: clean oclean
 re: oclean all
