@@ -13,15 +13,15 @@ def island_perimeter(grid):
     ancho = 0
     if not isinstance(grid, list):
         return 0
-    if sum(grid) == 1:
-        return 1
     for row in grid:
         if sum(row) > 1:
             ancho = sum(row)
         elif sum(row) == 1:
             largo += 1
-    if largo > 0:
+    if largo > 0 and ancho > 0:
         largo += 1
+    elif ancho == 0 and largo == 1:
+        return 1
     area = 2 * (ancho + largo)
     return area
 
