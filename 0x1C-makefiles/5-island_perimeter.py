@@ -11,6 +11,7 @@ def island_perimeter(grid):
     """
     largo = 0
     ancho = 0
+    perimetro = 0
     if not isinstance(grid, list):
         return 0
     for row in grid:
@@ -22,9 +23,5 @@ def island_perimeter(grid):
         largo += 1
     elif ancho == 0 and largo == 1:
         return 1
-    area = 2 * (ancho + largo)
-    return area
-
-
-if __name__ == "__main__":
-    main()
+    perimetro = 2 * (ancho + largo)
+    return perimetro
