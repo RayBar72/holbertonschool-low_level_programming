@@ -18,6 +18,14 @@ int binary_search(int *array, size_t size, int value)
 	fin =  size - 1;
 	inter = (size - 1) / 2;
 
+	if (size == 1)
+	{
+		if (array[0] == value)
+			return (0);
+		else
+			return (-1);
+	}
+
 	while (inic < fin)
 	{
 		printf("Searching in array: ");
