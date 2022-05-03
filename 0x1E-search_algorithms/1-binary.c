@@ -20,6 +20,7 @@ int binary_search(int *array, size_t size, int value)
 
 	if (size == 1)
 	{
+		printf("Searching in array: %i\n", array[inic]);
 		if (array[0] == value)
 			return (0);
 		else
