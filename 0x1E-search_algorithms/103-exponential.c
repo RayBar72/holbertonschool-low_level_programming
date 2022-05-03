@@ -1,7 +1,8 @@
 #include "search_algos.h"
 
 /**
- * exponential_search - Function thar searches for value using exponetial search
+ * exponential_search - Function thar searches for value using
+ * exponetial search
  * @array: pointerr to the array to be searched
  * @size: size of the array
  * @value: value to be searche
