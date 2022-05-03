@@ -14,10 +14,6 @@ int binary_search(int *array, size_t size, int value)
 
 	if (!array)
 		return (-1);
-	if (!value)
-		return (-1);
-	if (!size)
-		return (-1);
 
 	fin =  size - 1;
 	inter = (size - 1) / 2;
